@@ -1,0 +1,48 @@
+<%= render "prep_courses/header" %>
+<!-- Header -->
+  <header style="background-image: url('<%= current_user.cover %>'); background-size: cover">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="intro-text">
+                    <img class="icons8" src="https://cdn3.iconfinder.com/data/icons/technology-mix/200/Technology_Mix_-_Final-37-512.png" width="200" height="200">
+                      <span class="name">Update Your Profile</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <!-- WHAT IS devprep -->
+  <section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>Create your post using the form below and click submit.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 text-center">
+                <br></br>
+                <%= form_for(@user, :html => { :id => "new_blog_form" }) do |f| %>
+                    <%= f.text_field :first_name, class: "new-post", :placeholder => "First name" %>
+                    <%= f.text_field :last_name, class: "new-post", :placeholder => "Last name" %>
+                    <%= f.text_field :title, class: "new-post", :placeholder => "Title" %>
+                    <%= f.hidden_field :email, :value => @user.email %>
+                    <%= f.hidden_field :password, :value => @user.password %>
+                    <%= f.text_area :bio, class: "new-post", id: "content-form", :placeholder => "Bio" %>
+                    <%= f.text_field :twitter, class: "new-post", :placeholder => "Twitter Handle" %>
+                    <%= f.text_field :slack, class: "new-post", :placeholder => "Slack" %>
+                    <%= f.text_field :instagram, class: "new-post", :placeholder => "Instagram" %>
+                    <%= f.text_field :git, class: "new-post", :placeholder => "Git Link" %>
+                    <%= f.file_field :cover, class: "inputfile" %>
+                      <%= f.label :cover, "Upload Cover" %>
+                    <%= f.file_field :avatar, class: "inputfile" %>
+                      <%= f.label :avatar, "Upload Avatar" %>
+                    <br></br>
+                    <%= f.submit "Update Profile", class: "btn-submit" %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+  </section>

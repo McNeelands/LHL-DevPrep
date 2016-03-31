@@ -1,0 +1,20 @@
+<%= form_for(@post, :html => { :id => "new_blog_form" }) do |f| %>
+<div class="form-group">
+   <h5>Title</h5>
+   <%= f.text_field :title, class: "new-post", :placeholder => "title" %>
+   <br></br>
+   <h5>Description</h5>
+   <%= f.text_field :description, class: "new-post", :placeholder => "Description" %>
+   <br></br>
+   <h5>Content</h5>
+   <%= f.text_area :content, class: "new-post", id: "content-form", :placeholder => "Content" %>
+ <a href="https://github.com/vmg/redcarpet/blob/master/README.markdown" target="_blank">Feel free to use HTML here, click for more info.</a>
+   <br></br>
+   <h5>Cover Photo</h5>
+   <%= f.file_field :cover, class: "inputfile" %>
+     <%= f.label :cover, "Upload Cover" %>
+   <%= f.hidden_field :user_id, :value => @post.user_id %>
+   <br></br>
+ </div>
+   <%= f.submit "Submit Post", class: "btn-submit" %>
+<% end %>

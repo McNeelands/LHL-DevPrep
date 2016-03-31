@@ -1,0 +1,54 @@
+<%= render "prep_courses/header" %>
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header style="background-image: url('<%= @user.cover %>'); background-size: cover">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1><%= @user.first_name %>'s Articles</h1>
+          <hr class="small">
+          <span class="subheading"><%= @user.title %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<br></br>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <% @posts.each do |post| %>
+      <div class="post-preview">
+        <div class="user-container">
+          <a href="/users/<%= post.user.id %>"><img id="blog-profile-pic" src="<%= post.user.avatar.url %>"></a>
+          <div class="user-box">
+            <a id="blog_name" href="/users/<%= post.user.id %>"><%= post.user.first_name %> <%= post.user.last_name %></a>
+            <p id="user-info"><%= post.user.title %></p>
+          </div>
+          <%= render "likes/likes", post: post %>
+        </div>
+        <%= link_to(post_path(post)) do %>
+        <!-- <a href="/posts/<%= post.id %>"> -->
+        <h2 class="post-title">
+          <%= post.title %>
+        </h2>
+        <h4 class="post-subtitle">
+          <%= post.description %>
+        </h4>
+        <% end %>
+      </div>
+      <hr>
+      <% end %>
+
+      <!-- Pager -->
+      <ul class="pager">
+        <li class="next">
+          <a href="#">Older Posts &rarr;</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

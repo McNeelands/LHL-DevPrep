@@ -1,0 +1,9 @@
+I"É(function() {
+  $('.like-button').on('click', function(event) {
+    var current_value;
+    current_value = $('#like-btn').val();
+    return $('#like-btn').val(current_value + 1);
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,91 @@
+<%= render "prep_courses/header" %>
+
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('<%= @post.cover.url %>'); background-size: cover">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1><%= @post.title %></h1>
+          <h2 class="subheading"><%= @post.description %></h2>
+          <hr>
+          <span class="meta">Posted by <%= @post.user.first_name %> <%= @post.user.last_name %></span>
+          <br></br>
+          <% if @post.user_id == current_user.id %>
+          <a href="/posts/<%= @post.id %>/edit"><button id="edit-post">Edit Post</button></a>
+          <% end %>
+          <% if current_user && current_user.admin? %>
+          <p class="recipe-delete"><%= link_to "Delete", post_path(@post), method: "delete" %><p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<br></br>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <%= markdown(@post.content) %>
+      </div>
+    </div>
+  </div>
+</article>
+
+<hr>
+
+<!-- Blog Comments -->
+
+<!-- Comments Form -->
+
+<div class="well">
+   <h4>Leave a Comment:</h4>
+   <%= form_for(:comments, url: post_comments_path(@post), method: :post) do |f| %>
+     <%= f.text_area :text, :placeholder => "Such A Great Post...", class: "new-comment" %>
+     <%= f.submit "Post", class: "comment-btn-submit" %>
+   <% end %>
+
+</div>
+
+<hr>
+
+<!-- Posted Comments -->
+
+<!-- Comment -->
+<% @post.comments.each do |comment| %>
+<div class="comment-box">
+  <a class="pull-left" href="/users/<%= comment.user.id %>">
+    <img id="comment-user-photo" class="media-object" src="<%= comment.user.avatar.url %>" alt="http://museprintables.com/images/silhouettes/rubber-duck-silhouette.png">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= comment.user.first_name %>
+      <small><%= comment.created_at %></small>
+    </h4>
+    <p><%= comment.text %></p>
+  </div>
+</div>
+<hr>
+<% end %>
+
+
+<!-- Nested Comment -->
+<!-- <div class="comment-box">
+<a class="pull-left" href="#">
+<img class="media-object" src="http://placehold.it/64x64" alt="">
+</a>
+<div class="media-body">
+<h4 class="media-heading">Nested Start Bootstrap
+<small>August 25, 2014 at 9:30 PM</small>
+</h4>
+Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+</div>
+</div> -->
+<!-- End Nested Comment -->
+<!-- </div>
+</div>
+<br></br> -->

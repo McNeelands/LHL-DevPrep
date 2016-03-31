@@ -1,0 +1,16 @@
+<div class="media">
+  <div class="media-left">
+    <a href="/users/<%= conversation.originator.id %>">
+      <img class="chat_avatar" class="media-object" src="<%= conversation.originator.avatar %>" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= conversation.originator.first_name %> <br>
+      <small><b>Subject: </b><%= conversation.subject %></small><br>
+      <small><%=  conversation.messages.last.created_at.strftime("%A, %b %d, %Y at %I:%M%p") %></small>
+    </h4>
+    <%= truncate conversation.messages.last.body, length: 145 %>
+    <%= link_to "View", conversation_path(conversation)  %>
+  </div>
+</div>

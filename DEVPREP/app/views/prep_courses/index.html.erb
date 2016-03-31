@@ -1,0 +1,140 @@
+<%= render "header" %>
+
+
+    <!-- Header -->
+    <header style="background-color: #2E3F51">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img id="user-photo" class="img-responsive" src="<%= current_user.avatar.url %>" alt="">
+                    <div class="intro-text">
+                        <span class="name"><%= User.random_gen %> <%= current_user.first_name %></span>
+                        <hr class="hub-hr-white">
+                        <span class="skills">Only <span id="getting-started"></span> Days Left Until Bootcamp!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>LETS DO THIS!</h2>
+                    <hr>
+                    <br></br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/intro" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+
+                            </div>
+                        </div>
+                        <img id="border-radius" src="assets/intro.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/html" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+
+                            </div>
+                        </div>
+                        <img id="border-radius" src="assets/html.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/javascript" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                            </div>
+                        </div>
+                        <img id="border-radius" src="assets/js.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/ruby" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                            </div>
+                        </div>
+                        <img id="border-radius" src="assets/ruby.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/git" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                            </div>
+                        </div>
+                        <img id="border-radius" src="assets/git.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/posts" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                            </div>
+                        </div>
+                        <img id="border-radius" src="assets/hub.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>For Students By Students</h2>
+                </div>
+            </div>
+            <br></br>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Dev Prep is an application designed to prepare you for any upcoming web development course or bootcamp. This application was built from a students point of view as to what to expect and what the prepare for.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Whether you are brand new to coding or a ninja on the keys, DevPrep has something for you. With ever evolving content and solutions there is always something new to learn and discover!</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="/intro" class="btn btn-lg btn-outline">
+                        <i class="fa fa-share"></i> NEXT STEP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HELP Section -->
+   <section id="portfolio">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-12 text-center">
+                   <h2>HELP?!</h2>
+                   <br>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-8 col-lg-offset-2 text-center">
+                   <p>DEVprep was designed to be challenging. Sometimes you may get stuck. If you have been stuck for longer than 30 minutes it may be time to ask for help.</p>
+                   <br>
+                   <p>Google is a great source if you are stuck but sometimes you need to ask a direct question. That's why we have proided you access to a help forum.</p>
+               </div>
+               <div class="col-lg-8 col-lg-offset-2 text-center">
+                   <a href="http://web-prep.lighthouselabs.ca/" id="blue-button" target="_blank" class="btn btn-lg btn-outline">
+                       <i class="fa fa-share"></i> FORUM
+                   </a>
+               </div>
+           </div>
+       </div>
+   </section>
+
+    <%= render "footer" %>

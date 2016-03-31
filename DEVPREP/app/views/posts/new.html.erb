@@ -1,0 +1,31 @@
+<%= render "prep_courses/header" %>
+<!-- Header -->
+  <header style="background-image: url('/assets/update2.jpg'); background-size: cover">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="intro-text">
+                    <img class="icons8" src="https://cdn3.iconfinder.com/data/icons/technology-mix/200/Technology_Mix_-_Final-37-512.png" width="200" height="200">
+                      <span class="name">Create A New Post</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <!-- WHAT IS devprep -->
+  <section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>Create your post using the form below and click submit.</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <br></br>
+                <%= render "posts/form" %>
+            </div>
+        </div>
+    </div>
+  </section>

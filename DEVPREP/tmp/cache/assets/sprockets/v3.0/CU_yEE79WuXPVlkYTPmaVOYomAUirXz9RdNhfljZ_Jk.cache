@@ -1,0 +1,12 @@
+I"1(function() {
+  $(function() {
+    return $('#conversations-modal').on('show.bs.modal', function(event) {
+      var conversationId, modal;
+      modal = $(this);
+      conversationId = $(event.relatedTarget).data('conversation-id');
+      return console.log(conversationId);
+    });
+  });
+
+}).call(this);
+:ET

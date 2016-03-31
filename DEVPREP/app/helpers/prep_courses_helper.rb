@@ -1,0 +1,2 @@
+module PrepCoursesHelper
+end

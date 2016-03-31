@@ -1,0 +1,17 @@
+I"Ú(function() {
+  $(function() {
+    return $('#conversations-modal').on('show.bs.modal', function(event) {
+      var conversationId, modal;
+      modal = $(this);
+      conversationId = $(event.relatedTarget).data('conversation-id');
+      return $.ajax({
+        url: /conversations/${conversationId}/messages/modal_content,
+        method: 'GET'
+      }).done(function(info) {
+        return modal.find('.modal-content').html(info);
+      });
+    });
+  });
+
+}).call(this);
+:ET

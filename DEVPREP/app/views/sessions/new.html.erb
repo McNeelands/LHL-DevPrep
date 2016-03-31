@@ -1,0 +1,29 @@
+<div class="transparent-header">
+  <ul id="login-header">
+    <a href="/signup"><li  class="login-logo" id="special-signup">SIGN-UP</li></a>
+  </ul>
+</div>
+<!-- Login Form Section -->
+<div class="container">
+    <div id="logo_container" class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <img src="assets/devprep_logo.png" id="log_in_logo"/>
+        <p id="log_in_slogan">WebDev Bootcamp Prep-Course</p>
+      </div>
+    </div>
+</div>
+<br>
+    <div class="container">
+        <div id="formsies" class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <%= form_for(:session, url: login_path, :html => { :id => "log_in_form" }) do |f| %>
+              <%= f.email_field :email, class: "log_in_form_fields", :placeholder => "Email" %>
+              <br></br>
+              <%= f.password_field :password, class: "log_in_form_fields", :placeholder => "Password" %>
+              <br></br>
+              <%= f.submit "Login", class: "log_in_btn_submit" %>
+            <% end %>
+          </div>
+        </div>
+    </div>
+<img class="background-image" src="/assets/background.jpg">

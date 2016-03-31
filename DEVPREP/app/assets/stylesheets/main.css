@@ -1,0 +1,554 @@
+// = require_self
+
+.ul_intro li {
+  font-size: 20px;
+}
+
+input:focus {
+    outline:none !important;
+}
+
+.submit-button {
+  background-color: rgb(236, 240, 241);
+  border: none;
+  margin-top: 25px;
+  border-radius: 5px;
+  width: 40%;
+}
+
+.comment-btn {
+  width: 96.5%;
+  background-color: pink;
+  border-radius: 15px;
+}
+
+.btn-submit {
+  background-color: rgba(78, 78, 78, 0.4);
+  border-bottom: none;
+  line-height: 35px;
+  border-radius: 4px;
+}
+
+hr.hub-hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+    width: 100%;
+}
+
+hr.hub-hr-white {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  width: 70%;
+}
+
+.list_head_push_intro {
+padding-left: 125px;
+font-weight: bolder;
+}
+
+.icons8 {
+  -webkit-filter: invert(1);
+}
+
+.special-login {
+  margin-top: 30px;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* Preserve aspet ratio */
+  max-width: 100%;
+  max-height: auto;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+   margin-top: 15px;
+   padding-top: 10px;
+   width: 250px;
+   height: 50px;
+   font-size: 1.25em;
+   font-weight: 700;
+   color: #74776e ;
+   border: 2px solid;
+   border-color: #D0D0D0 ;
+   border-radius: 5px;
+   display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+   border: 3px solid;
+   border-color: #D0D0D0 ;
+   border-radius: 5px;
+}
+
+.inputfile + label {
+    cursor: pointer; /* "hand" cursor */
+}
+
+.pss-input {
+  border-bottom: none;
+}
+
+.user-container {
+  width: 100%;
+}
+
+.user-box {
+  position: relative;
+  float: left;
+  margin-left: 5px;
+}
+
+.move-up {
+  margin-top: -10px;
+}
+
+.btn-submit {
+  background-color: rgba(78, 78, 78, 0.4);
+  line-height: 35px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.comment-box {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.comment-box p {
+  font-size: 17px;
+  margin-left: 8px;
+}
+
+.login-logo {
+  margin-left: 3%;
+  color:#f2f2f2;
+  font-size: 170%;
+}
+
+.headline {
+  max-height: 550px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #403F3E;
+  transition: .7s;
+}
+
+.post-title {
+  color: #565A5A;
+}
+
+.post-subtitle {
+  color: #A9ADAC;
+}
+
+.please {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input::-webkit-input-placeholder {
+   color: rgba(250,250,250,1);
+   text-transform: uppercase;
+   font-size: 22px;
+}
+
+textarea, input {
+  outline: none;
+  font-size: 25px;
+  color: white;
+}
+
+ul.nav.nav-pills.nav-stacked {
+  height: 165px;
+  overflow-y: scroll;
+}
+
+.like-form {
+  width: inherit;
+}
+
+.transparent-header {
+  background-color: rgba(250,250,250,.2);
+  height: 65px;
+}
+
+/*CHAT*/
+
+.chat_avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+}
+
+.inbox_labels{
+ font-size: 2vh;
+ margin-right: 20px;
+}
+
+.inbox_subject{
+ margin: 0;
+ color: black;
+ padding-left: 5px;
+ height: 50px;
+ border: 2px solid grey;
+}
+
+.send_msg{
+ color: grey;
+ border: 2px solid grey;
+ line-height: 35px;
+ width: 30%;
+ margin-left: 230px;
+}
+
+.panel-body{
+ width: 100%;
+}
+
+ul.nav.nav-pills.nav-stacked{
+ overflow: hidden;
+}
+
+.panel-default{
+ width: 100%;
+}
+
+.trash_btn{
+font-size: 1em;
+width: 80%;
+height: 55px;
+margin-top: 20px;
+margin-left: 120px;
+background-color: #ea5644  ;
+border-radius: 5px;
+}
+
+.reply_btn{
+ width: 30%;
+ margin-left: 35%;
+ background-color: #66b3ff ;
+ border-radius: 5px;
+}
+
+/*FORM STYLES*/
+
+.log_in_form_fields{
+ width: 80%;
+ background-color: rgba(78, 78, 78, 0.4);
+ border-radius: 5px;
+ padding-left: 10px;
+}
+
+.log_in_btn_submit{
+ width: 50%;
+ background-color: rgba(78, 78, 78, 0.4);
+ border-radius: 5px;
+}
+
+.new-upload{
+ padding-top: 25px;
+ padding-left: 20%;
+ color: black;
+ border: 2px solid #CACACA;
+ width: 100%;
+}
+
+.new-post {
+ background-color: rgb(250, 249, 251, 0);
+ border: 2px solid #CACACA;
+ padding-left: 10px;
+ margin-top: 10px;
+ color: #696969;
+ width: 100%;
+ font-size: 20px;
+ border-radius: 5px;
+}
+
+.new-comment {
+ background-color: rgb(242, 241, 244);
+ border-bottom: 2px solid black;
+ padding-left: 10px;
+ margin-left: 20%;
+ color: black;
+ width: 70%;
+ border-radius: 6px;
+ border: groove;
+}
+
+.comment-btn-submit {
+ background-color: rgb(242, 241, 244);
+ border: 2px solid #D0D0D0;
+ padding-left: 10px;
+ margin-top: 20px;
+ margin-left: 40%;
+ color: black;
+ width: 30%;
+ border-radius: 8px;
+}
+
+.new-post:focus {
+ background-color: rgb(250, 249, 251);
+ border-bottom: 3px solid black;
+ padding-left: 10px;
+ margin-top: 10px;
+ color: black;
+ width: 100%;
+}
+
+/*input:placeholder-shown {
+ border-bottom: 3px solid black;
+}*/
+
+input::-webkit-input-placeholder {
+  color: #74776e ;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.btn-submit {
+ background-color: rgba(242, 241, 244, 0);
+ border: 2px solid #CACACA;
+ padding-left: 10px;
+ margin-top: 10px;
+ color: #69697B;
+ width: 100%;
+ width: 60%;
+}
+
+::-webkit-input-placeholder {
+   color: #74776e ;
+}
+*:-moz-placeholder {
+   /* FF 4-18 */
+   color: #74776e ;
+}
+*::-moz-placeholder {
+   /* FF 19+ */
+   color: #74776e ;
+}
+*:-ms-input-placeholder {
+   /* IE 10+ */
+   color: #74776e ;
+}
+
+
+/* LOGIN/SIGNUP FORMS */
+
+#formsies {
+  margin-top:5px;
+}
+
+#link {
+  color: #7F7F7F;
+}
+
+#orange {
+  background-color: rgba(255, 154, 88, 1);
+}
+
+#purple {
+  background-color: rgba(210, 81, 255, 0.88);
+}
+
+#white {
+  color: white;
+}
+
+#violet {
+  background-color: rgba(137, 206, 137, 0.87);
+}
+
+#red {
+  background-color: #f8453a;
+}
+
+#special-signup {
+  opacity: 0.7;
+  font-weight: 50;
+}
+
+#login-header li {
+  display: inline-block;
+}
+
+#blog-image {
+  background-image: url("/assets/backdrop.jpg");
+  background-size: cover;
+}
+
+#blog-profile-pic {
+  height: 55px;
+  width: 55px;
+  border-radius: 100%;
+  position: relative;
+  float: left;
+}
+
+#comment-user-photo {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+}
+
+#blog_name {
+  font-size: 20px;
+  color: rgb(153, 152, 151);
+}
+
+#user-info {
+  font-size: 15px;
+}
+
+#like-btn {
+ background-image: url("http://png-2.vector.me/files/images/2/6/264101/rubber_duck_thumb");
+ width: 75px;
+ height: 55px;
+ background-size: 70px;
+ margin-top: -5px;
+ margin-right: 50px;
+ float: right;
+ color: black;
+}
+
+#content {
+  height: 300px;
+}
+
+#header-opacity {
+  background-color: rgba(250, 250, 250, 0.71);
+}
+
+#prof-page-pic {
+  height: 240px;
+  width: 240px;
+  border-radius: 100%;
+  margin-top: -38px;
+}
+
+#no-bullet li {
+  list-style: none;
+  font-size: 23px;
+  display: inline-flex;
+}
+
+#content-form{
+  width: 100%;
+  height: 100%
+}
+
+#new_blog_form{
+  width: 100%;
+}
+
+#border-radius {
+  border-radius: 15px;
+}
+
+#log_in_form{
+ width: 100%;
+}
+
+#special-signup {
+ margin-top: 15px;
+ opacity: 0.7;
+ font-weight: 50;
+}
+
+#log_in_logo{
+ width: 75%;
+ height: auto;
+}
+
+#log_in_slogan{
+ color: white;
+ font-size: 3.5vh;
+ font-weight: bold;
+}
+
+#logo_container{
+ margin-top: 100px;
+}
+
+#sign_up_form{
+ margin-top: 50px;
+}
+
+#mail-icon {
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+  margin-right: 10px;
+}
+
+#special-mail {
+  margin-top: 13px;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+#edit-post {
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#edit-post:hover {
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+  color: #E2E3E4;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: .5s;
+}
+
+#admin-list {
+  background-color: rgba(236, 236, 236, 0.63);
+  border-radius: 5px;
+}
+
+#blue-button {
+  border-color: #2C3E6A
+}
+
+#git-white {
+  color: #BDBDBD;
+}
+
+
+#contact {
+  position: absolute;
+  top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#user-photo {
+  margin-top: -35px;
+  height: 260px;
+  width: 260px;
+  border-radius: 100%;
+}
